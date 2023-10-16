@@ -21,9 +21,10 @@ public class ScreenshotTesting {
 		
 		
 		WebDriverManager.chromedriver().setup();
-		WebDriver d= new ChromeDriver(); d.manage().window().maximize();
-		d.get("https://demo.guru99.com/test/web-table-element.php"); 
-		Thread.sleep(2000);
+		WebDriver d= new ChromeDriver(); 
+		d.manage().window().maximize();
+		d.get("https://practicetestautomation.com/practice-test-login/"); 
+		Thread.sleep(4000);
 		
 		TakesScreenshot ts=(TakesScreenshot)d;
 		File src=ts.getScreenshotAs(OutputType.FILE);
