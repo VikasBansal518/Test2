@@ -1,0 +1,44 @@
+package testNGBasics;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Reporter;
+import org.testng.annotations.*;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class ParametersExample { 
+	
+	WebDriver driver;
+	
+	@BeforeMethod
+	  public void setUp() {
+    	 
+    	  System.out.println("Start test");
+    	  WebDriverManager.chromedriver().setup();
+  		  driver= new ChromeDriver(); 
+          driver.manage().window().maximize();
+    	  String url = "https://www.google.com";
+    	  driver.get(url);
+    	  driver.manage().window().maximize();
+    	 
+	  }
+
+	@Parameters({"keyWord"})
+	@Test
+	public void search(String keyWord){
+    	WebElement txtBox = driver.findElement(By.xpath("//*[@name='q']"));
+    	  txtBox.sendKeys(keyWord);
+    	  Reporter.log("Keyword entered is : " +keyWord);
+    	  txtBox.sendKeys(Keys.ENTER);
+    	  Reporter.log("Search results are displayed.");
+	}
+	
+	@AfterMethod
+	public void burnDown(){
+    	driver.quit();
+	}
+
+}

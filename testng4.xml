@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TestNG listenersDemo.Listener Example">
+    <listeners>
+        <listener class-name="listenersDemo.InvokedMethodListenerDemo"/>
+    </listeners>
+    <test name="TestNG Sample Test" preserve-order="true">
+        <classes>
+            <class name="listenersDemo.AnnotationTransformerTests1"/>
+        </classes>
+    </test>
+</suite>

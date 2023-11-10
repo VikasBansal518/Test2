@@ -3,11 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="javabasics.TestSortClass">
+      <class name="pageobjectTests.BrowserTest">
         <methods>
-          <include name="test"/>
+          <include name="setup"/>
+          <include name="enter_userDetails"/>
+          <include name="close"/>
+          <include name="navigate_to_homepage_click_on_getstarted"/>
         </methods>
-      </class> <!-- javabasics.TestSortClass -->
+      </class> <!-- pageobjectTests.BrowserTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

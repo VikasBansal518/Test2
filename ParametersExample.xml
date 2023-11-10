@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests"  name="suite">
+  <test name="demo1" >
+      <parameter name="keyWord" value="Selenium" />
+      <classes>
+      <class name="testNGBasics.ParametersExample"/>
+    </classes>
+  </test> <!-- Test -->
+   <test name="demo2" >
+    <parameter name="keyWord" value="LambdaTest" />
+    <classes>
+      <class name="testNGBasics.ParametersExample"/>
+    </classes>
+  </test> <!-- Test -->
+   	<test name="demo3" >
+		  <parameter name="keyWord" value="Browser Testing" />
+    <classes>
+      <class name="testNGBasics.ParametersExample"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

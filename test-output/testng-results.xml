@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-16T11:14:37 IST" name="Default suite" finished-at="2023-10-16T11:14:37 IST" duration-ms="63">
+  <suite started-at="2023-11-01T18:56:55 IST" name="Default suite" finished-at="2023-11-01T18:57:06 IST" duration-ms="11384">
     <groups>
     </groups>
-    <test started-at="2023-10-16T11:14:37 IST" name="Default test" finished-at="2023-10-16T11:14:37 IST" duration-ms="63">
-      <class name="javabasics.TestSortComparator">
-        <test-method signature="test()[pri:0, instance:javabasics.TestSortComparator@1a942c18]" started-at="2023-10-16T11:14:37 IST" name="test" finished-at="2023-10-16T11:14:37 IST" duration-ms="10" status="PASS">
+    <test started-at="2023-11-01T18:56:55 IST" name="Default test" finished-at="2023-11-01T18:57:06 IST" duration-ms="11384">
+      <class name="pageobjectTests.BrowserTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:pageobjectTests.BrowserTest@28261e8e]" started-at="2023-11-01T18:56:55 IST" name="setup" finished-at="2023-11-01T18:57:01 IST" duration-ms="6147" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-      </class> <!-- javabasics.TestSortComparator -->
+        </test-method> <!-- setup -->
+        <test-method signature="navigate_to_homepage_click_on_getstarted()[pri:1, instance:pageobjectTests.BrowserTest@28261e8e]" started-at="2023-11-01T18:57:01 IST" name="navigate_to_homepage_click_on_getstarted" finished-at="2023-11-01T18:57:05 IST" duration-ms="4195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigate_to_homepage_click_on_getstarted -->
+        <test-method is-config="true" signature="close()[pri:0, instance:pageobjectTests.BrowserTest@28261e8e]" started-at="2023-11-01T18:57:05 IST" name="close" finished-at="2023-11-01T18:57:06 IST" duration-ms="992" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- pageobjectTests.BrowserTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

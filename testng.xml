@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="TestNG common.Listener Example">
+<suite name="Automation tests">
     <listeners>
-        <listener class-name="common.AnnotationTransformer"/>
+        <listener class-name="extentReports.MyListener"></listener>
     </listeners>
-    <test name="TestNG Sample Test" preserve-order="true">
+ <test name = "Parallel Tests" parallel = "tests" thread-count="2">
+
         <classes>
-            <class name="common.RetryOnlyFailedTests"/>
+            <class name="extentReports.InputFormTest"/>
+            <class name="extentReports.AlertTests"></class>
+
         </classes>
-    </test>
-</suite>
+    </test> <!-- Test -->
+
+
+</suite> <!-- Suite -->

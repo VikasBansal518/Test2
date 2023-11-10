@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TestNG Group Test">
+    <test name="TestNG Sample Test" preserve-order="true">
+        <groups>
+            <run>
+              <include name = "group1"></include>
+              <exclude name = "group2"></exclude>
+              <exclude name = "group3"></exclude>
+            </run>
+        </groups>
+        <classes>
+            <class name="testNGBasics.GroupsExample1"></class>
+        </classes>
+    </test>
+</suite>

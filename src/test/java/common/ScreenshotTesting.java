@@ -19,11 +19,10 @@ public class ScreenshotTesting {
 	@Test
 	public static void screenshotTesting() throws Exception {
 		
-		
 		WebDriverManager.chromedriver().setup();
 		WebDriver d= new ChromeDriver(); 
 		d.manage().window().maximize();
-		d.get("https://practicetestautomation.com/practice-test-login/"); 
+		d.get("https://www.google.com"); 
 		Thread.sleep(4000);
 		
 		TakesScreenshot ts=(TakesScreenshot)d;
@@ -31,15 +30,11 @@ public class ScreenshotTesting {
 		File trg=new File(".\\Screenshots\\homepage1.png");
 		FileUtils.copyFile(src, trg);
 		
-		WebElement e=d.findElement(By.xpath("//div[@class='row topper']"));
+		WebElement e=d.findElement(By.xpath("//*[@name='q']"));
+		e.sendKeys("Screenshot testing");
 		File src1=e.getScreenshotAs(OutputType.FILE);
 		File trg1=new File(".\\Screenshots\\homepage2.png");
 		FileUtils.copyFile(src1, trg1);
-		
-		WebElement e1=d.findElement(By.xpath("//img[@role='presentation']"));
-		File src2=e1.getScreenshotAs(OutputType.FILE);
-		File trg2=new File(".\\Screenshots\\homepage3.png");
-		FileUtils.copyFile(src2, trg2);
 		
 	    System.out.println("TC completed");
 
